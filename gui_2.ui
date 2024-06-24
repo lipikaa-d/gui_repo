@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>808</width>
+    <height>807</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>771</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Main Window Style */
+QWidget {
+    background-color: rgb(255, 204, 255);  /* Pinkish background */
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>-1</y>
+        <width>568</width>
+        <height>44</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetNoConstraint</enum>
+       </property>
+       <item>
+        <widget class="QLabel" name="Number_label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">/* Title Label Style */
+QLabel#Number_label {
+    background-color:rgb(44, 120, 127);  /* Bluish background */
+    color: white;               /* Font color for the text */
+    font: 14pt &quot;MS Shell Dlg 2&quot;;
+    padding: 5px;
+    border-radius: 10px;                   /* Rounded corners */
+    border: 2px solid rgb(85, 0, 127);           
+}
+</string>
+         </property>
+         <property name="text">
+          <string> 1</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="text">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text{
+ background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: bold 17pt &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}
+
+</string>
+         </property>
+         <property name="text">
+          <string>Scale the Stresses and Modify the Temperature      </string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>751</width>
+        <height>509</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetNoConstraint</enum>
+       </property>
+       <property name="horizontalSpacing">
+        <number>8</number>
+       </property>
+       <item row="12" column="3">
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    background-color: rgb(167, 255, 200);  /* Bluish background */
+    color: rgb(148, 0, 111);               /* Font color for the text */
+    font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+    padding: 5px;
+    border-radius: 5px;                   /* Rounded corners */
+    border: 2px solid rgb(85, 0, 127);           
+}</string>
+         </property>
+         <property name="text">
+          <string>Submit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="5">
+        <widget class="QLabel" name="text_11">
+         <property name="styleSheet">
+          <string notr="true">QLabel#text_11{
+background-color: rgb(255, 204, 255);
+color: black;               
+font: 12pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Multiplier</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="5">
+        <widget class="QLabel" name="text_12">
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text_12{
+background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 12pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Stress</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="3">
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    background-color: rgb(167, 255, 200);  /* Bluish background */
+    color: rgb(148, 0, 111);               /* Font color for the text */
+    font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+    padding: 5px;
+    border-radius: 5px;                   /* Rounded corners */
+    border: 2px solid rgb(85, 0, 127);           
+}</string>
+         </property>
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="7">
+        <widget class="QLineEdit" name="lineEdit_6">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit#lineEdit_6{
+background-color: #ffffff;
+border: 2px solid #000;
+border-radius: 6px;                   /* Rounded corners */
+  
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="2">
+        <widget class="QLabel" name="text_4">
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text_4{
+ background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 17pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>TMF Input file (Required for TMF)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QPushButton" name="pushButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    background-color: rgb(167, 255, 200);  /* Bluish background */
+    color: rgb(148, 0, 111);               /* Font color for the text */
+    font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+    padding: 5px;
+    border-radius: 5px;                   /* Rounded corners */
+    border: 2px solid rgb(85, 0, 127);           
+}</string>
+         </property>
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="7">
+        <widget class="QLabel" name="text_10">
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text_10{
+background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 12pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Adder</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="QLabel" name="text_3">
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text_3{
+ background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 17pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Global xml file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="5">
+        <widget class="QLabel" name="text_7">
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text_7{
+background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 12pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Stress</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="5">
+        <widget class="QLineEdit" name="lineEdit_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit#lineEdit_4{
+background-color: #ffffff;
+border: 2px solid #000;
+border-radius: 6px;                   /* Rounded corners */
+  
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="2">
+        <widget class="QLineEdit" name="lineEdit_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #ffffff;
+    border: 2px solid #000;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="text_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text_2{
+ background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 17pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Local xml file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="6">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="6" column="7">
+        <widget class="QLabel" name="text_14">
+         <property name="styleSheet">
+          <string notr="true">QLabel#text_14{
+background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 12pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Adder</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="7">
+        <widget class="QLabel" name="text_13">
+         <property name="styleSheet">
+          <string notr="true">QLabel#text_13{
+background-color: rgb(255, 204, 255);
+color: black;              
+font: 12pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Temp</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="5">
+        <widget class="QLineEdit" name="lineEdit_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit#lineEdit_5{
+background-color: #ffffff;
+border: 2px solid #000;
+border-radius: 6px;                   /* Rounded corners */
+  
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="3">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="2">
+        <widget class="QLineEdit" name="lineEdit_8">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #ffffff;
+    border: 2px solid #000;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QLineEdit" name="lineEdit_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #ffffff;
+    border: 2px solid #000;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="4">
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="7" column="3">
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    background-color: rgb(167, 255, 200);  /* Bluish background */
+    color: rgb(148, 0, 111);               /* Font color for the text */
+    font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+    padding: 5px;
+    border-radius: 5px;                   /* Rounded corners */
+    border: 2px solid rgb(85, 0, 127);           
+}</string>
+         </property>
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="2">
+        <widget class="QLabel" name="text_6">
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text_6
+{
+ background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 17pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Merge Local xml into Global xml</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="7">
+        <widget class="QLabel" name="text_9">
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text_9{
+background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 12pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Temp</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="5">
+        <widget class="QLabel" name="text_8">
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text_8{
+background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 12pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Multiplier</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="4">
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="13" column="3">
+        <spacer name="verticalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="7" column="7">
+        <widget class="QLineEdit" name="lineEdit_7">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit#lineEdit_7{
+background-color: #ffffff;
+border: 2px solid #000;
+border-radius: 6px;                   /* Rounded corners */
+  
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="2">
+        <widget class="QLabel" name="text_16">
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text_16{
+ background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 17pt  &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}</string>
+         </property>
+         <property name="text">
+          <string>Local xml + Global xml &amp; Run TMF</string>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="3">
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    background-color: rgb(167, 255, 200);  /* Bluish background */
+    color: rgb(148, 0, 111);               /* Font color for the text */
+    font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+    padding: 5px;
+    border-radius: 5px;                   /* Rounded corners */
+    border: 2px solid rgb(85, 0, 127);           
+}</string>
+         </property>
+         <property name="text">
+          <string>Submit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>590</y>
+        <width>701</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextBrowser#textBrowser{
+ background-color: white;
+}
+
+</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+     <widget class="QWidget" name="formLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>551</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="Number_label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">/* Title Label Style */
+QLabel#Number_label_2{
+    background-color:rgb(44, 120, 127);  /* Bluish background */
+    color: white;               /* Font color for the text */
+    font: 14pt &quot;MS Shell Dlg 2&quot;;
+    padding: 5px;
+    border-radius: 10px;                   /* Rounded corners */
+    border: 2px solid rgb(85, 0, 127);           
+}
+</string>
+         </property>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="text_5">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#text_5{
+ background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: bold 17pt &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}
+
+</string>
+         </property>
+         <property name="text">
+          <string>Convert xml file from M_MPa Unit </string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#label{
+ background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: bold 17pt &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>System to mm_MPa Unit System</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>280</y>
+        <width>451</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_9">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    background-color: #ffffff;
+    border: 2px solid #000;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    background-color: rgb(167, 255, 200);  /* Bluish background */
+    color: rgb(148, 0, 111);               /* Font color for the text */
+    font: bold 8pt &quot;MS Shell Dlg 2&quot;;
+    padding: 5px;
+    border-radius: 5px;                   /* Rounded corners */
+    border: 2px solid rgb(85, 0, 127);           
+}</string>
+         </property>
+         <property name="text">
+          <string>Browse</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="text_15">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>230</y>
+        <width>251</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QLabel#text_15{
+ background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: bold 17pt &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>xml file in M MPa Unit</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>130</y>
+        <width>551</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">
+QLabel#label_2{
+ background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: 12pt &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Nodal coordinates scaled by 1.0E3, Nodal Stresses scaled by 1.0E-6</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>330</y>
+        <width>441</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QLabel#label_3{
+ background-color: rgb(255, 204, 255);
+color: black;                /* Font color */
+font: bold 17pt &quot;Arial Narrow&quot;;
+ font-weight: normal;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Select the box if the given xml file has :</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>380</y>
+        <width>431</width>
+        <height>199</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="checkBox_1">
+         <property name="styleSheet">
+          <string notr="true">
+
+QCheckBox#checkBox_1 {
+    background-color: rgb(255, 204, 255); 
+    color: black;                       
+    font: normal 17pt &quot;Arial Narrow&quot;;   
+}
+
+QCheckBox#checkBox_1::indicator {
+background-color: white; 
+    width: 40px; 
+    height: 40px; 
+}
+
+QCheckBox#checkBox_1::indicator:unchecked {
+    image: url(&quot;C:/Users/Lipika Dudeja/Downloads/unchecked.svg&quot;); 
+}
+
+QCheckBox#checkBox_1::indicator:checked {
+    image: url(&quot;C:/Users/Lipika Dudeja/Downloads/checked.svg&quot;); 
+}</string>
+         </property>
+         <property name="text">
+          <string>Nodal Temperature</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_2">
+         <property name="styleSheet">
+          <string notr="true">QCheckBox#checkBox_2 {
+    background-color: rgb(255, 204, 255); 
+    color: black;                       
+    font: normal 17pt &quot;Arial Narrow&quot;;   
+}
+
+QCheckBox#checkBox_2::indicator {
+background-color: white; 
+    width: 40px; 
+    height: 40px; 
+}
+
+QCheckBox#checkBox_2::indicator:unchecked {
+    image: url(&quot;C:/Users/Lipika Dudeja/Downloads/unchecked.svg&quot;); 
+}
+
+QCheckBox#checkBox_2::indicator:checked {
+    image: url(&quot;C:/Users/Lipika Dudeja/Downloads/checked.svg&quot;); 
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Nodal Coordinates</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_3">
+         <property name="styleSheet">
+          <string notr="true">QCheckBox#checkBox_3 {
+    background-color: rgb(255, 204, 255); 
+    color: black;                       
+    font: normal 17pt &quot;Arial Narrow&quot;;   
+}
+
+QCheckBox#checkBox_3::indicator {
+background-color: white; 
+    width: 40px; 
+    height: 40px; 
+}
+
+QCheckBox#checkBox_3::indicator:unchecked {
+    image: url(&quot;C:/Users/Lipika Dudeja/Downloads/unchecked.svg&quot;); 
+}
+
+QCheckBox#checkBox_3::indicator:checked {
+    image: url(&quot;C:/Users/Lipika Dudeja/Downloads/checked.svg&quot;); 
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Element Connectivities</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="checkBox_4">
+         <property name="styleSheet">
+          <string notr="true">QCheckBox#checkBox_4{
+    background-color: rgb(255, 204, 255); 
+    color: black;                       
+    font: normal 17pt &quot;Arial Narrow&quot;;   
+}
+
+QCheckBox#checkBox_4::indicator {
+background-color: white; 
+    width: 40px; 
+    height: 40px; 
+}
+
+QCheckBox#checkBox_4::indicator:unchecked {
+    image: url(&quot;C:/Users/Lipika Dudeja/Downloads/unchecked.svg&quot;); 
+}
+
+QCheckBox#checkBox_4::indicator:checked {
+    image: url(&quot;C:/Users/Lipika Dudeja/Downloads/checked.svg&quot;); 
+}</string>
+         </property>
+         <property name="text">
+          <string>Nodal Stresses</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_2">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>730</y>
+        <width>751</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextBrowser#textBrowser{
+ background-color: white;
+}
+
+</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>590</y>
+        <width>701</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextBrowser#textBrowser_3{
+ background-color: white;
+}
+
+</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>780</y>
+      <width>781</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
